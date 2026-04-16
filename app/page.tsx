@@ -475,7 +475,7 @@ export default function Page() {
                       onArchive={() => setScreen('archive')}
                       onCapture={() => cameraInputRef.current?.click()}
                       onUpload={() => uploadInputRef.current?.click()}
-                      active={screen === 'archive' ? 'archive' : sourceType === 'upload' ? 'upload' : 'capture'}
+                      active={screen === 'archive' ? 'archive' : image ? (sourceType === 'upload' ? 'upload' : 'capture') : ''}
                       archiveCount={archive.length}
                     />
 
